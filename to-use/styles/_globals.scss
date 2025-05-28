@@ -1,0 +1,31 @@
+@use 'helpers' as *;
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-light);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
